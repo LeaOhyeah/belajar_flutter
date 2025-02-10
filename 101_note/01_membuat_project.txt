@@ -1,0 +1,11 @@
+cara membuat project fultter dengan teks editor android studio dan OS linux
+    buka dokumentasi https://docs.flutter.dev/get-started/install/linux/android
+    baca hardware requirements, pastikan perangkat anda memenuhinya
+    baca OS minimun, pastikan OS anda memenuhinya
+    lakukan instalasi dependensi sesuai dokumentasi seperti: curl, git, unzip, xz-utils, zip, libglu1-mesa
+    selanjutnya install vscode dan extension flutter didalam nya
+    atau baca dokumentasi lebih lanjut di https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter
+    jalankan extension dengan ctrl + shift + p dan pilih Flutter:New Project
+    pilih project android dan beri nama
+    
+    "jika terdapat peringatan error karena tidak terdapat fultter sdk maka install flutter sdk dengan mengikuti petunjuk di vscode, kemudian konfigurasikan sdk tersebut ke vscode"
