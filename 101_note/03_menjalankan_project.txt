@@ -1,0 +1,9 @@
+menjalankan aplikasi
+menjalankan aplikasi dengan device chrome (web-javascript)
+	pastikan ekstensi flutter sudah terinstall
+	pastikan device chrome (web-javascrip) tersedia
+	masuk ke /lib/main.dart
+	tekan run di atas function main
+	project akan terbuka di sebuah tab chrome
+	jika ingin melakukan perubahan dan melakukan hot reload maka tekan icon petir di navigasi ekstensi flutter vscode
+	perubahan langsung bisa dilihat tanpa menjalankan ulang
