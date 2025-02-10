@@ -1,0 +1,42 @@
+Structure code
+
+import 'package:flutter/material.dart';
+    Mengimpor paket flutter/material.dart, yang berisi komponen UI berbasis Material Design.
+    Jika ingin menggunakan gaya Cupertino (iOS style) dengan import 'package:flutter/cupertino.dart';
+
+fungsi main()
+    main() → Fungsi utama yang pertama kali dijalankan ketika aplikasi dimulai.
+    runApp(MyApp()) → Menjalankan aplikasi Flutter dan menampilkan widget MyApp.
+
+Kelas MyApp / Root Widget
+    MyApp adalah widget utama yang mengatur tema dan navigasi aplikasi.
+    MaterialApp:
+        title: 'Flutter Demo' -> Nama aplikasi (muncul di task manager Android).
+        theme: ThemeData(primarySwatch: Colors.blue) -> Menentukan tema warna utama aplikasi.
+        home: HomePage() -> Halaman pertama yang ditampilkan saat aplikasi dibuka.
+
+Kelas HomePage / Halaman Utama
+    HomePage adalah halaman utama aplikasi.Menggunakan Scaffold, yang merupakan kerangka dasar aplikasi dengan:
+        AppBar -> Bar atas yang menampilkan judul "Home Page".
+        body -> Konten utama aplikasi, di sini berisi teks "Hello, Flutter!" di tengah layar.
+
+
+harus terdapat function main yang berisi runApp(object dari class widget/dengan parent widget)
+terdapat 2 class widget yaitu StatelessWidget dan StatefulWidget
+
+
+- menjalankan dengan MaterialApp di dalam runApp().
+    runApp(MaterialApp(...)) → Langsung menjalankan aplikasi tanpa membuat class terpisah.
+
+- menjalankan menggunakan pendekatan modular
+    memisahkan widget utama ke dalam class MyApp dan Home.
+    runApp(MyApp()) → Menjalankan aplikasi dengan MyApp sebagai widget utama.
+    MyApp extends StatelessWidget -> Merupakan widget utama aplikasi, yang membungkus aplikasi dalam MaterialApp.
+    MaterialApp(home: Home()) -> Mengatur Home sebagai halaman utama aplikasi.
+    dengan pendekatan ini kita bisa membuat class lain untuk halaman / tampilan lain
+
+- menjalankan menggunakan pendekatan modular dengan file terpisah
+    Selain memisahkan dalam class di satu file, kita juga bisa memisahkan widget halaman ke file lain.
+    main.dart dapat memanggil Home dari file terpisah dengan import 'home.dart'; // Mengimpor file home.dart
+    terdapat cara lain untuk import, pilihan dapat dilihat dengan ctrl + space
+    Dengan pendekatan ini, jika ingin menambahkan halaman lain, misalnya profile.dart, tinggal buat file baru dan impor ke main.dart.
