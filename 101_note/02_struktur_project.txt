@@ -1,0 +1,72 @@
+structure project
+.idea tergantung teks editor
+.dart tool dari sdk
+pubspec.yaml 
+	pubspec.yaml adalah file konfigurasi utama dalam proyek Flutter yang digunakan untuk mendefinisikan berbagai aspek proyek, termasuk dependensi, metadata aplikasi (nama,
+	deskripsi, versi), dan pengaturan lainnya. File ini mirip dengan package.json di Node.js atau composer.json di Laravel.
+	
+	Memasang dependensi baru
+		Setelah menambahkan dependensi, jalankan:
+		flutter pub get
+		Ini akan mengunduh paket yang diperlukan.
+	
+	Memperbarui dependensi
+		flutter pub upgrade
+		Ini akan memperbarui paket ke versi terbaru yang sesuai dengan batasan yang ditentukan.
+
+	Memeriksa dependensi usang
+		flutter pub outdated
+	
+	Mempublish
+		flutter pub publish
+		publish_to: 'none' perlu dihapus jika ingin publis ke pub.dev
+	
+	Version: 1.0.0+1 adalah versi aplikasi dan build number
+		versi aplikasi menggunakan semantic versioning Major.Minor.Patch
+			Major -> UTAMA, perubahan besar atau breaking changes.
+			Minor -> MENENGAH, fitur baru yang tetap kompatibel dengan versi sebelumnya.
+			Patch -> PERBAIKAN, perbaikan bug atau perubahan kecil tanpa menambah fitur baru.
+		build number menggunakan increment 1, bertambah setiap build di store (play store / app store)
+		
+	Environment
+		- Menentukan versi Dart SDK yang kompatibel dengan proyek.
+		- Membantu menghindari masalah kompatibilitas dengan versi SDK yang lebih baru atau lebih lama.
+		- sdk: ^3.6.2` Proyek ini bisa dijalankan pada Dart versi 3.6.2 atau lebih baru, selama masih dalam versi 3.x.x.
+		- Jika ingin membatasi versi, bisa menggunakan format:
+		  sdk: ">=3.6.2 <4.0.0"
+	
+	Dependencies
+		- Berisi paket-paket utama yang digunakan dalam aplikasi.
+		- Paket yang didefinisikan di sini akan digunakan dalam runtime.
+		- `flutter:` → Menunjukkan bahwa proyek ini menggunakan Flutter SDK sebagai framework utama.
+		- `cupertino_icons: ^1.0.8` → Paket berisi ikon gaya iOS yang bisa digunakan di aplikasi.
+		- Contoh tambahan: menambahkan paket untuk HTTP request (ingat untuk flutter pub get)
+			dependencies:
+			  http: ^0.13.5
+	
+	Dev Dependencies
+		- Berisi dependensi yang hanya diperlukan saat pengembangan, seperti testing dan linting.
+		- Tidak akan disertakan dalam aplikasi yang dirilis ke pengguna.
+		- `flutter_test:` → Paket bawaan Flutter untuk melakukan pengujian unit, widget, dan integrasi.
+		- `flutter_lints:` → Paket untuk aturan linting kode (agar kode lebih rapi dan sesuai standar).
+		Contoh tambahan: menambahkan paket untuk membuat mock data dalam testing (ingat untuk flutter pub get)
+			dev_dependencies:
+			  mockito: ^5.4.0
+	
+	Flutter Configuration
+		- Berisi konfigurasi tambahan untuk proyek Flutter.
+		- Biasanya digunakan untuk mengaktifkan Material Design, menambahkan aset, dan mengelola font.
+		- `uses-material-design: true` → Mengaktifkan Material Design, sehingga bisa menggunakan widget seperti `ElevatedButton`, `AppBar`, dll.
+		- Contoh tambahan: menambahkan gambar/assets (ingat untuk flutter pub get)
+			assets:
+			  - assets/images/logo.png
+			  - assets/icons/icon.png
+		- Contoh tambahan: menambahkan font kustom: (ingat untuk flutter pub get)
+			 fonts:
+			   - family: Roboto
+			     fonts:
+			       - asset: assets/fonts/Roboto-Regular.ttf
+			       - asset: assets/fonts/Roboto-Bold.ttf
+			       weight: 700
+	Untuk konfigurasi detail/fokus ke sebuah platform, edit di folder sesuai platform nya, misal /web untuk web
+Base aplikasi terdapat di /lib, tepatnya /lib/main.dart, dalam satu project hanya ada satu main.dart
