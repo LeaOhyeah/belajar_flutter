@@ -1,0 +1,6 @@
+Dibagian laya terdapat banner debug, itu terjadi karena setiap aplikasi yang kita run dalam mode development (baik di chrome, device, ataupun emulator) sebetulnya masih versi debug, bukan versi relase. saat sudah di eksport menjadi sebuah aplikasi baik .apk atau format apapun, banner debug akan hilang sendiri asalkan sudah masuk versi relase.
+namun jika menggangu, untuk menghilangkan nya, dengan properti debugShowCheckedModeBanner kita dapat memasukkan nilai boolean (true/false) untuk menentukan tampilan banner, contoh:
+ return MaterialApp(
+      home: Home(),
+      debugShowCheckedModeBanner: false,
+    );
