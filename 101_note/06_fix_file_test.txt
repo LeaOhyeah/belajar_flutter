@@ -1,0 +1,4 @@
+Dalam beberapa kasus terdapat error di /test/widget_test.dart
+itu adalah testing yang digunakan untuk starter aplikasi counter saat menginstall flutter
+error biasanya karena MyApp() tidak mengizinkan konstanta
+anda hanya perlu menghapus const untuk mengatasi error ini 
