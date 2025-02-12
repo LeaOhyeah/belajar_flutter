@@ -6,8 +6,17 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      body: Center(child: Text("Ini Home dari file lain"),),
+      appBar: AppBar(
+        title: Text("Halo Mobile"),
+        backgroundColor: Colors.blue,
+      ),
+      body: const Center(
+        child: Text(
+          "Ini adalah teks saya",
+          style: TextStyle(fontSize: 20, color: Colors.blue),
+        ),
+      ),
+      // body: Center(child: Text("Ini Home dari file lain"),),
     );
   }
 }
