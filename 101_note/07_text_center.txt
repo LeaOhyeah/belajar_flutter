@@ -1,0 +1,30 @@
+Disini akan menjelaskan penggunaan widget yang sering digunakan yaitu text dan styling
+
+widget text
+	kita bisa menambahkan properti body dengan argumen sebuah string didalam kutip atau kutip ganda
+	contoh:	body: Text("Ini adalah teks saya")
+	selain string terdapat argumen lain seperti
+center
+	urutan widget secara default di kiri atas
+	untuk memposisikan widget seperti teks berada di tengah kita bisa memasukkan dalam method Center
+	method Center berfungsi memposisikan widget lain ke tengah, 
+	misal teks ingin kita tampilkan di tengah body, maka buat method Center di dalam properti body
+	lalu teks kita bisa memasukkan nya ke properti child di dalam method Center, contoh:
+	return Scaffold(
+	      body: const Center(
+		child: Text("Ini adalah teks saya"),
+	      ),
+    	);
+    	
+styling dengan properti style
+	properti style meminta value Objek TextStyle dengan properti didalam nya seperti:
+	background, color, font dll. contoh:
+	return Scaffold(
+	      body: const Center(
+		child: Text(
+		"Ini adalah teks saya",
+		style: TextStyle(fontSize: 20, color: Colors.blue),
+		),
+	      ),
+    	);
+	
