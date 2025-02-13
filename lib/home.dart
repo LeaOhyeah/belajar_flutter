@@ -7,7 +7,15 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: Icon(Icons.menu),
+        titleSpacing: 0,
+        centerTitle: true,
         title: Text("Halo Mobile"),
+        actions: [
+          Icon(Icons.notifications),
+          Icon(Icons.settings),
+          
+        ],
         backgroundColor: Colors.blue,
       ),
       body: const Center(
