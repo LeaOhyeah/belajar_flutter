@@ -1,0 +1,16 @@
+Pada method AppBar di property appBar terdapat banyak sekali property lain seperti
+action, actionIconTheme, shape, shadow, shadowColor dll (tekan ctrl + space untuk detail)
+hal utama yang perlu diketahui adalah property 
+leading -> bagian kiri
+    widget yang umum digunakan pada leading adalah icon atau icon button, sebenarnya kita juga bisa memasukkan teks
+title -> bagian tengah nya
+    widget yang umum digunakan di sini adalah teks, bisa juga yang lain nya
+    untuk memberi jarak antara title dan leading gunakan property titleSpacing yang membutuhkan value integer
+    default teks di iOS adalah text center, kita juga bisa secara manual dengan property centerTitle: true
+    karena di material tidak ke tengah
+action -> bagian kiri
+    ini bertipe list widget (bisa diisi beberapa widget)
+    ini tidak secara otomatis memiliki jarak seperti antara titel dengan leading atau antara leading dengan appBar
+    
+selain itu jika ingin mengubah warna background appBar bisa menggunakan property backgroundColor: Colors
+ 
