@@ -1,0 +1,10 @@
+Selain text kita juga bisa menambahkan widget icon, misalnya di dalam body
+dengan menggunakan method Icon() dari material.dart lalu mengirim argument Icons.nama icon
+maka kita bisa menggunakan icon dari material icon, contoh
+body: const Center(
+        child: Icon(
+          Icons.face
+        ),
+      ),
+secara default icon berwarna hitam, jika ingin melakukan styling, kita bisa menambahkan properti seperti 
+color, size dll (tekan ctrl + space untuk informasi lebih lengkap)
