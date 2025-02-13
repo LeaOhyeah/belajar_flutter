@@ -11,9 +11,10 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.blue,
       ),
       body: const Center(
-        child: Text(
-          "Ini adalah teks saya",
-          style: TextStyle(fontSize: 20, color: Colors.blue),
+        child: Icon(
+          Icons.face,
+          color: Colors.blue,
+          size: 48,
         ),
       ),
       // body: Center(child: Text("Ini Home dari file lain"),),
