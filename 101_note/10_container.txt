@@ -1,0 +1,61 @@
+menerapkan container di bagian body
+    Container adalah widget serbaguna di Flutter yang digunakan untuk mengatur tata letak & gaya tampilan suatu elemen
+    Fitur Utama Container:
+    - Mendukung ukuran custom -> Bisa mengatur width & height.
+    - Mendukung warna & dekorasi -> Bisa diberi color atau BoxDecoration.
+    - Mendukung margin & padding -> Bisa mengatur jarak dengan margin & padding.
+    - Bisa membungkus widget lain -> Digunakan sebagai pembungkus elemen UI.
+
+sifat dari container adalah mengikuti root nya, jika didalam body maka root mengikuti body
+namun jika terdapat child di dalam container maka dia mengikuti container
+misal didalam body terdapat container dan style color blue, maka body berwarna biru
+tapi jika terdapat child didalam body container, misal teks, maka area teks yang berwarna biru
+misal:
+body: Container( // body berwarna amber
+        color: Colors.amber,
+      )
+
+body: Container(
+        color: Colors.amber,
+        child: Text("Text container"), // body di child area / text berwarna amber
+      )
+    
+styling dengan decoration 
+    di dalam container terdapat property decoration yang dapat di isi method BoxDecoration()
+    di dalam nya terdapat property-property seperti color juga
+    jika sudah ada color di BoxDecoration, maka tidak boleh ada property color lagi diluarnya,
+    ini akan mengakibatkan error, misal:
+    body: Container(
+        decoration: BoxDecoration(
+          color: Colors.amber,
+          
+        ),
+        color: Colors.amber,
+        child: Text("Text container"),
+      )
+
+container juga bisa diberi padding dengan property padding: EdgeInsertGeometry
+    misal 
+    body: Container(
+          padding: EdgeInsets.all(16), // .all jarak 16px ke semua sisi
+          )
+    atau dengan .formLTRB dari kiri samapai bawah
+
+container juga bisa diberi margin, caranya seperti padding
+urutan box dari dalam: content -> padding -> border -> margin
+margin berada di luar konten, batas konten adalah padding
+
+selain itu juga terdapat property borderRadius yang bisa ditempatkan di BoxDecoration
+borderRadius: BorderRadius.circular(radius), circular berisi sebuah double
+
+jika ingin mengatur seberapa besar wilayah container, kita bisa menggunakan property
+height untuk tinggi
+width untuk lebar 
+misal Container(
+  height: 100
+  width:300
+)
+
+jika ingin menaruh child container (misal teks) ke tengah, alih-alih mengukur padding secara manual
+kita bisa menggunakan property alignment: Alingnment.center
+ketika terdapat Alingnment, maka padding tidak berlaku
