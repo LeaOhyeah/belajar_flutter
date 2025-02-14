@@ -17,23 +17,17 @@ class Home extends StatelessWidget {
           ],
           backgroundColor: Colors.blue,
         ),
-        body: Container(
-          height: 100,
-          width: 300,
-          margin: EdgeInsets.all(30),
-          alignment: Alignment.center,
-          // padding: EdgeInsets.all(16),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(30.0),
-            color: Colors.amber,
-          ),
-          // color: Colors.amber,
-          child: Text(
-            "Text container",
-            style: TextStyle(fontSize: 30),
-          ),
-        )
-        // body: Center(child: Text("Ini Home dari file lain"),),
-        );
+        body: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: ElevatedButton(
+              onPressed: () {
+                print("Button telah ditekan");
+              },
+              style: ButtonStyle(
+                  backgroundColor: WidgetStateProperty.resolveWith(
+                      (states) => Colors.amber)),
+              // style: ElevatedButton.styleFrom(backgroundColor: Colors.blue),
+              child: Text("Click Me!")),
+        ));
   }
 }
