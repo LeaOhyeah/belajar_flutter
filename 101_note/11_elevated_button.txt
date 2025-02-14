@@ -1,0 +1,33 @@
+salah satu button di flutter adalah elevated button
+ini adalah tombol dengan efek elevasi (bayangan) yang memberikan tampilan modern dan responsif.
+fitur Utama ElevatedButton:
+- Tombol dengan efek bayangan → Terangkat dari permukaan.
+- Mendukung onPressed untuk aksi saat ditekan.
+- Bisa dikustomisasi dengan warna, bentuk, dan teks.
+
+dalam function ElevatedButton terdapat 2 property yaitu
+onPressed -> value berupa fungsi yang dipanggil saat tombol ditekan.
+child → falue berupa isi tombol (biasanya Text).
+contoh
+body: ElevatedButton(
+          onPressed: () {}, 
+          child: Text("Click Me!"))
+        );
+
+seperti biasa, button click me atau widget apapun secara default akan ditampilkan di kiri atas
+kita bisa mengatur padding komponen dengan method Padding() secara langsung, alih-alih membuat
+container dan melakukan styling box seperti padding
+dengan ctrl + . kita bisa membungkus widget dengan widget lain, misal membungkus ElevatedButton
+dengan Padding
+
+sekarang kita bisa membuat sebuah fungsi untuk onPressed, misal mencetak sesuatu ke debug console
+onPressed: () {
+    print("teks")
+}, 
+
+selain onPressed dan child, terdapat property lain seperti
+- onLongPress -> aksi saat ditekan lama.
+- focusNode & autofocus -> kontrol fokus.
+- clipBehavior -> cara memotong konten tombol.
+- icon -> untuk menambahkan ikon (hanya di ElevatedButton.icon).
+- style -> untuk styling
