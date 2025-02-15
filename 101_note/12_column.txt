@@ -1,0 +1,43 @@
+Column adalah widget tata letak yang digunakan untuk menyusun widget secara vertikal (atas ke bawah).
+contoh:
+Column(
+  children: [
+    Text("Baris 1"),
+    Text("Baris 2"),
+    Text("Baris 3"),
+  ],
+)
+
+Fitur Utama Column:
+    Menyusun widget dalam satu kolom (vertikal).
+    Dapat mengatur perataan (alignment) dan distribusi ruang (mainAxisAlignment).
+    Mendukung Expanded dan Flexible untuk penyesuaian ukuran.
+
+Property yang ada di dalam Column adalah:
+    mainAxisAlignment mengatur distribusi atas-bawah.
+    pilihan mainAxisAlignment:
+            start -> Semua widget di atas.
+            center -> Semua widget di tengah.
+            end -> Semua widget di bawah.
+            spaceBetween -> Ruang rata di antaranya.
+            spaceEvenly -> Ruang sama di atas, tengah, dan bawah.
+            spaceAround -> Ruang hampir sama, tapi lebih kecil di tepi.
+
+    crossAxisAlignment mengatur perataan kiri-kanan.
+    pilihan crossAxisAlignment:
+        start -> Rata kiri.
+        center -> Rata tengah.
+        end -> Rata kanan.
+        stretch -> Memperluas widget hingga penuh.
+        
+    mainAxisSize mengatur seberapa besar Column menggunakan ruang vertikalnya.
+    pilihan mainAxisSize:
+        MainAxisSize.max (Default) → Column mengambil seluruh tinggi yang tersedia.
+        MainAxisSize.min → Column hanya menggunakan tinggi sesuai kebutuhan widget di dalamnya.
+    Expanded & Flexible membuat tata letak lebih responsif.
+    contoh 
+    children: [
+        Expanded(child: Container(color: Colors.red)),
+        Expanded(child: Container(color: Colors.green)),
+    ]
+    Hasil: 2 kontainer dengan ukuran sama besar di satu kolom.
