@@ -6,28 +6,32 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          leading: Icon(Icons.menu),
-          titleSpacing: 0,
-          centerTitle: true,
-          title: Text("Halo Mobile"),
-          actions: [
-            Icon(Icons.notifications),
-            Icon(Icons.settings),
+      appBar: AppBar(
+        leading: Icon(Icons.menu),
+        titleSpacing: 0,
+        centerTitle: true,
+        title: Text("Halo Mobile"),
+        actions: [
+          Icon(Icons.notifications),
+          Icon(Icons.settings),
+        ],
+        backgroundColor: Colors.blue,
+      ),
+      body: Container(
+        color: Colors.cyan,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.end,
+          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            Text("Lea Alyu Maulana Rochman", style: TextStyle(fontSize: 20)),
+            Text("4C TRPL", style: TextStyle(fontSize: 20)),
+            Text("2315354071", style: TextStyle(fontSize: 20)),
+            Text("TRPL", style: TextStyle(fontSize: 20)),
+            Container(color: Colors.amber, height: 70, width: 140),
           ],
-          backgroundColor: Colors.blue,
-        ),
-        body: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: ElevatedButton(
-              onPressed: () {
-                print("Button telah ditekan");
-              },
-              style: ButtonStyle(
-                  backgroundColor: WidgetStateProperty.resolveWith(
-                      (states) => Colors.amber)),
-              // style: ElevatedButton.styleFrom(backgroundColor: Colors.blue),
-              child: Text("Click Me!")),
-        ));
+        ), // Column
+      ), // Container
+    );
   }
 }
