@@ -1,0 +1,50 @@
+Row adalah widget tata letak yang digunakan untuk menyusun widget secara horizontal (kiri ke kanan).
+Fitur Utama Row:
+- Menyusun widget dalam satu baris (horizontal).
+- Bisa mengatur perataan (alignment) dan distribusi ruang (mainAxisAlignment).
+- Dapat dikombinasikan dengan Expanded dan Flexible untuk tata letak yang lebih fleksibel.
+
+Row dan Column memiliki properti yang sama, tetapi berlaku di arah yang berbeda.
+Perbedaan Utama
+Properti            Row (Horizontal)            Column (Vertikal)
+mainAxisAlignment   Mengatur posisi kiri-kanan	Mengatur posisi atas-bawah
+crossAxisAlignment	Mengatur posisi atas-bawah	Mengatur posisi kiri-kanan
+mainAxisSize	    Mengatur lebar Row	        Mengatur tinggi Column
+
+Jika ingin memberi jarak ke Column atau Row kita bisa menggunakan mainAxisAlignment,
+selain itu kita juga bisa memberi jarak dengan widget SizedBox
+SizedBox adalah widget di Flutter yang digunakan untuk memberikan ukuran tetap pada widget 
+atau memberikan spasi kosong antar elemen UI.
+
+Beberapa contoh penerapan SizedBox:
+
+SizedBox dengan Lebar & Tinggi Tetap
+SizedBox(
+  width: 100,
+  height: 50,
+  child: ElevatedButton(
+    onPressed: () {},
+    child: Text("Klik Saya"),
+  ),
+)
+
+SizedBox sebagai Spacer (Jarak Kosong)
+Column(
+  children: [
+    Text("Atas"),
+    SizedBox(height: 20), // Memberi jarak 20px
+    Text("Bawah"),
+  ],
+)
+
+SizedBox tanpa Child
+SizedBox(width: 50, height: 50)
+
+
+SizedBox.expand (Ukuran Maksimal)
+SizedBox.expand(
+  child: ElevatedButton(
+    onPressed: () {},
+    child: Text("Full Size"),
+  ),
+) // Tombol memenuhi seluruh ruang yang tersedia.
