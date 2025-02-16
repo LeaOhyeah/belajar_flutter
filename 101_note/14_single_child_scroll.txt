@@ -1,0 +1,34 @@
+SingleChildScrollView adalah widget yang memungkinkan konten yang lebih besar dari layar 
+bisa di-scroll secara vertikal atau horizontal.
+Saat Column digunakan tanpa batasan tinggi, maka semua anaknya akan ditampilkan penuh.
+Jika terlalu banyak konten, bisa menyebabkan overflow (error UI bocor keluar layar).
+
+contoh overflow dan solusi tanpa / dengan SingleChildScrollView
+
+body: Column(
+        children: [
+          Container(height: 1200, color: Colors.red,)
+        ],
+      )
+jika ukuran layar dibawah 1200 (tingginya) maka terjadi overflow
+
+
+sebenarnya ini bisa diatasi dengan Expanded atau Flexible, dengan membungkus didalamnya
+ body: Column(
+        children: [
+          Flexible(child: Container(height: 1200, color: Colors.red,))
+        ],
+      )
+dengan ini ukuran Container tidak akan melebihi layar
+
+
+namun jika anda tetap ingin widget (Container 1200) tetap ditampilkan seutuhnya, maka 
+SingleChildScrollView adalah solusinya
+body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Container(height: 1200, color: Colors.red,)
+          ],
+        ),
+      )
+dengan ini ukuran Container akan tetap 1200 dan bisa di scroll ke bawah
