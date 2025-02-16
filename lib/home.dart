@@ -19,16 +19,15 @@ class Home extends StatelessWidget {
       ),
       body: Container(
         color: Colors.cyan,
-        child: Column(
+        child: Row(
           crossAxisAlignment: CrossAxisAlignment.end,
           mainAxisAlignment: MainAxisAlignment.center,
           mainAxisSize: MainAxisSize.max,
           children: [
-            Text("Lea Alyu Maulana Rochman", style: TextStyle(fontSize: 20)),
+            Text("Lea Alyu Maulana", style: TextStyle(fontSize: 20)),
+            SizedBox(width: 16),
             Text("4C TRPL", style: TextStyle(fontSize: 20)),
             Text("2315354071", style: TextStyle(fontSize: 20)),
-            Text("TRPL", style: TextStyle(fontSize: 20)),
-            Container(color: Colors.amber, height: 70, width: 140),
           ],
         ), // Column
       ), // Container
