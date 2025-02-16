@@ -17,20 +17,26 @@ class Home extends StatelessWidget {
         ],
         backgroundColor: Colors.blue,
       ),
-      body: Container(
-        color: Colors.cyan,
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.end,
-          mainAxisAlignment: MainAxisAlignment.center,
-          mainAxisSize: MainAxisSize.max,
+      body: SingleChildScrollView(
+        child: Column(
           children: [
-            Text("Lea Alyu Maulana", style: TextStyle(fontSize: 20)),
-            SizedBox(width: 16),
-            Text("4C TRPL", style: TextStyle(fontSize: 20)),
-            Text("2315354071", style: TextStyle(fontSize: 20)),
+            Container(height: 120, color: Colors.red,),
+            SizedBox(height: 16,),
+            Container(height: 120, color: Colors.orange,),
+            SizedBox(height: 16,),
+            Container(height: 120, color: Colors.yellow,),
+            SizedBox(height: 16,),
+            Container(height: 120, color: Colors.green,),
+            SizedBox(height: 16,),
+            Container(height: 120, color: Colors.blue,),
+            SizedBox(height: 16,),
+            Container(height: 120, color: Colors.black,),
+            SizedBox(height: 16,),
+            Container(height: 120, color: Colors.purple,),
+            SizedBox(height: 16,),
           ],
-        ), // Column
-      ), // Container
+        ),
+      )
     );
   }
 }
