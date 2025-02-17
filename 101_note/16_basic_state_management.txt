@@ -1,0 +1,46 @@
+StatelessWidget
+StatelessWidget adalah widget yang tidak memiliki state (data yang berubah) setelah dibuat.
+Ketika data berubah, StatelessWidget tidak bisa memperbarui UI. Contoh pada counter app:
+body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              '$_data',
+              style: TextStyle(fontSize: 40),
+            ),
+            ElevatedButton(onPressed: () {
+              _data++;
+              print(_data);
+            }, child: Text("Plus"))
+          ],
+        ),
+      ),
+
+_data berubah saat tombol ditekan, tetapi tampilan UI tidak berubah.
+Karena StatelessWidget tidak bisa memperbarui state, kita perlu StatefulWidget.
+
+
+StatefulWidget
+StatefulWidget adalah widget yang dapat berubah selama aplikasi berjalan.
+Dengan setState(), kita bisa memperbarui tampilan saat data berubah.
+class Home extends StatefulWidget {
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+    // kode counter app yang lain
+     ElevatedButton(
+                onPressed: () {
+                  _data++;
+                  setState(() {});
+                  print(_data);
+                },
+                child: Text("Plus")), 
+}
+
+tambahkan setState() di dalam ElevatedButton, ini artinya tampilan dan state di muat ulang setiap button ditekan
+
+
+"ini akan me refresh semua halaman yang ada di class _HomeState"
