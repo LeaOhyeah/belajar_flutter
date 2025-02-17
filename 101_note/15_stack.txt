@@ -1,0 +1,13 @@
+Stack adalah widget yang digunakan untuk menumpuk beberapa widget di atas satu sama lain.
+Jika Column dari atas kebawah (secara default) dan row dari kiri ke kanan (secara default)
+maka Stack dari bawah ke atas, seperti tumpukan (secara default)
+
+contoh
+body: Stack(
+        children: [
+          Container(height: 500, color: Colors.red,),
+          Container(height: 400, width: 300, color: Colors.yellow,),
+          Container(height: 300, width: 200, color: Colors.green,),
+          Container(height: 100, width: 100, color: Colors.blue,),
+        ],
+      )
