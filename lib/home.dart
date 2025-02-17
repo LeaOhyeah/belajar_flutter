@@ -17,25 +17,14 @@ class Home extends StatelessWidget {
         ],
         backgroundColor: Colors.blue,
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Container(height: 120, color: Colors.red,),
-            SizedBox(height: 16,),
-            Container(height: 120, color: Colors.orange,),
-            SizedBox(height: 16,),
-            Container(height: 120, color: Colors.yellow,),
-            SizedBox(height: 16,),
-            Container(height: 120, color: Colors.green,),
-            SizedBox(height: 16,),
-            Container(height: 120, color: Colors.blue,),
-            SizedBox(height: 16,),
-            Container(height: 120, color: Colors.black,),
-            SizedBox(height: 16,),
-            Container(height: 120, color: Colors.purple,),
-            SizedBox(height: 16,),
-          ],
-        ),
+      body: Stack(
+        alignment: Alignment.center,
+        children: [
+          Container(height: 500, color: Colors.red,),
+          Container(height: 400, width: 300, color: Colors.yellow,),
+          Container(height: 300, width: 200, color: Colors.green,),
+          Container(height: 100, width: 100, color: Colors.blue,),
+        ],
       )
     );
   }
